@@ -5,8 +5,9 @@
     <div class="span2">
       <!--Sidebar content-->
 
-      Search: <input ng-model="query" ng-change="refreshiScroll()" >
-      Sort by:
+      <span style="font-weight:bold;">Search</span>: <input ng-model="query" ng-change="refreshiScroll()" >
+	  <span style="font-weight:bold;">Sort by:</span>
+      
       <select ng-model="orderProp">
         <option value="name">Alphabetical</option>
         <option value="age">Newest</option>
@@ -20,7 +21,7 @@
 				
 				<li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail" style="height:200px; background-color:#aaaaaa;">
 				  <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
-				  <b><span style="font-size:16pt;">{{phone.name}}</span></b>
+				  <b><span style="font-size:16pt;font-weight:bold;">{{phone.name}}</span></b>
 				  <p>{{phone.snippet}}</p>
 				</li>
 			
